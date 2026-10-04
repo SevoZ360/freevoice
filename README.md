@@ -1,9 +1,4 @@
-# freevoice
-🎙️ FreeVoice: A lightning-fast, bilingual (EN/LT) voice-to-text assistant. Uses OpenAI Whisper and local LLMs to transcribe and clean up speech instantly. Hold a key, speak, and it types for you! ✨
-
-
-
- # 🎙️ FreeVoice
+# 🎙️ FreeVoice
 
 **FreeVoice** is a high-performance, privacy-focused voice assistant designed to turn your speech into perfectly formatted text instantly. By combining **OpenAI Whisper** for transcription and **Local LLMs** (via LM Studio or Odysseus) for grammar refinement, FreeVoice allows you to dictate text anywhere on your computer with zero latency and 100% privacy.
 
@@ -16,43 +11,35 @@
 *   **🔒 100% Local & Private:** Your voice and text never leave your machine. No cloud subscriptions required!
 *   **⚡ Hotkey Trigger:** Hold a single key (e.g., `CTRL`) to record; release to type.
 
-## 🛠️ Installation
+---
 
-### Prerequisites (Linux)
-You will need Python 3.10+, FFmpeg, and PortAudio installed:
-```bash
-sudo apt update
-sudo apt install ffmpeg portaudio19-dev python3-pip
-
-
-
-
-
- 🚀 Installation & Setup
+## 🚀 Installation & Setup
 
 Follow these steps to get **FreeVoice** running on your machine.
 
 ### 1. Install System Dependencies (Required)
-Whisper requires `ffmpeg` to process audio. This is a system-level tool, not a Python package.
+Whisper requires `ffmpeg` to process audio. This is a system-level tool, not just a Python package.
 
 **For Linux (Ubuntu/Debian):**
 ```bash
 sudo apt update && sudo apt install ffmpeg portaudio19-dev -y
+
 For macOS (using Homebrew):
 
-bash
+
 brew install ffmpeg portaudio
+
 For Windows:
 
 Download ffmpeg from ffmpeg.org.
 Add the bin folder to your System PATH.
-Install PortAudio via pip install pipwin then pipwin install pyaudio.
+Install PortAudio via terminal: pip install pipwin then pipwin install pyaudio.
 2. Install Python Dependencies
 Once the system tools are ready, install all the necessary Python libraries using pip.
 
 Run this command in your terminal:
 
-bash
+
 pip install openai-whisper sounddevice numpy pyautogui requests scipy keyboard
 Note: We use openai-whisper (the official package) to ensure the best performance and compatibility.
 
@@ -64,9 +51,14 @@ Load a model (e.g., Llama 3, Gemma, or Mistral).
 Start the Local Server.
 Ensure the server is running on http://localhost:1234.
 4. Running FreeVoice
-Navigate to your folder and run the script. On Linux/Mac, you may need sudo to allow the script to listen for your hotkey:
+Navigate to your folder and run the script. On Linux/Mac, you may need sudo to allow the script to listen for your global hotkey:
 
-bash
+
 sudo python my_flow.py
+⌨️ How to Use
+Hold your trigger key (Default is CTRL).
+Speak your message in English or Lithuanian.
+Release the key.
+Wait a moment for the AI to process, and it will type automatically!
 Happy Dictating! 🎙️✨
 
